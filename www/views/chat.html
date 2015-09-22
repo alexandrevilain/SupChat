@@ -1,0 +1,37 @@
+<ion-header-bar align-title="left" class="bar-positive">
+  <h1 class="title">Conversation: {{ conversation }}</h1>
+  <div class="buttons">
+    <button class="button" ng-click="logOut();"><i class="icon ion-log-out"></i> </button>
+  </div>
+</ion-header-bar>
+<ion-view title="Conversation">
+  <ion-content padding="true">
+    <div ng-repeat="message in messages">
+        <div ng-if="message.user == user">
+          <div class="bubble you">
+            {{ message.content }}
+          </div>
+        </div>
+      <div style="clear:both"></div>
+      <div ng-if="message.user != user">
+        <div class="bubble me">
+          {{ message.content }}
+        </div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+  </ion-content>
+    <ion-footer-bar keyboard-attach style="margin-bottom: 10px;">
+      <form style="width: 100%">
+      <div class="bar bar-header item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="search" placeholder="Tapez un message" ng-model="add.message">
+        </label>
+        <button class="button button-clear" type="submit" ng-click="add(add)">
+          Envoyer
+        </button>
+      </div>
+        <form>
+    </ion-footer-bar>
+  </form>
+</ion-view>

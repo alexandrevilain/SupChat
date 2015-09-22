@@ -1,0 +1,21 @@
+<!--
+<ion-nav-bar class="bar-stable">
+  <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back">Back</ion-nav-back-button>
+</ion-nav-bar>
+-->
+<ion-view title="Test">
+  <ion-content padding="true">
+    <img src="http://scr.sad.supinfo.com/img/Logo.jpg" style="width: 100%; height: auto;">
+    <form>
+      <label class="item item-input">
+        <span class="input-label">Conversation :</span>
+        <input type="text" placeholder="" ng-model="user.conversation">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Pseudonyme:</span>
+        <input type="text" placeholder="" ng-model="user.pseudo">
+      </label>
+      <button class="button button-stable button-block" type="submit" ng-click="save(user)">Connexion</button>
+    </form>
+  </ion-content>
+</ion-view>
