@@ -29,6 +29,6 @@ angular.module('app', ['ionic', 'app.controllers', 'firebase', 'ngIOS9UIWebViewP
       templateUrl: 'views/chat.html',
       controller: 'ChatCtrl'
     });
-    $urlRouterProvider.otherwise('/connexion');
+    $urlRouterProvider.otherwise('/connexion'); // la route par défaut
 
   });
